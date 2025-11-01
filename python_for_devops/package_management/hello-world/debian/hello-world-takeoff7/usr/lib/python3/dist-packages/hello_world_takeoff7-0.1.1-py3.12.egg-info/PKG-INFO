@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: hello-world-takeoff7
+Version: 0.1.1
+Summary: A simple hello world Python package
+Home-page: https://http://github.com/Take-Off-7/Devops
+Author: TakeOff
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Dynamic: author
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary

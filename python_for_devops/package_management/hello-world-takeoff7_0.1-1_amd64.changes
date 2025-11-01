@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Thu, 30 Oct 2025 14:14:47 +0000
+Source: hello-world-takeoff7
+Binary: hello-world-takeoff7
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Takeoff <tfakeye7@gmail.com>
+Changed-By: Take Off <takeoff@example.com>
+Description:
+ hello-world-takeoff7 - Simple "Hello World" Python example package
+Changes:
+ hello-world-takeoff7 (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release. (Closes: #XXXXXX)
+Checksums-Sha1:
+ f0018722ba976ff6be0c309518cbada377ae966f 3658 hello-world-takeoff7_0.1-1_all.deb
+ ff498ee3ce473382aaed940c07ad4f2f5af2121f 7042 hello-world-takeoff7_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 298926faf674ebdb30737a149804973298ec08e51445b7278d4443be422486c3 3658 hello-world-takeoff7_0.1-1_all.deb
+ 359d307da8d7f412d4c0b16ae093166a5087482d83de15ed0fcded21ba687d28 7042 hello-world-takeoff7_0.1-1_amd64.buildinfo
+Files:
+ a9916d6c83d28e5e55484c85a55948f3 3658 python optional hello-world-takeoff7_0.1-1_all.deb
+ 7f510200c6ba08f9a3caaf5ffb6af548 7042 python optional hello-world-takeoff7_0.1-1_amd64.buildinfo

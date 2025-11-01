@@ -1,0 +1,12 @@
+Package: hello-world-takeoff7
+Version: 0.1-1
+Architecture: all
+Maintainer: Takeoff <tfakeye7@gmail.com>
+Installed-Size: 31
+Depends: python3:any
+Section: python
+Priority: optional
+Homepage: http://github.com/Take-Off-7/Devops
+Description: Simple "Hello World" Python example package
+ This is a sample Python package used to demonstrate
+ Debian packaging with devscripts.

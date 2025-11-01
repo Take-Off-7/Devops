@@ -1,0 +1,163 @@
+ dpkg-buildpackage -us -uc -ui -i -b
+dpkg-buildpackage: info: source package hello-world-takeoff7
+dpkg-buildpackage: info: source version 0.1-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Take Off <takeoff@example.com>
+ dpkg-source -i --before-build .
+dpkg-buildpackage: info: host architecture amd64
+dpkg-source: warning: unknown information field 'Build-Depends' in input data in binary package stanza of template control file
+ fakeroot debian/rules clean
+dh clean --with python3 --skip-tests
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/workspaces/Devops/python_for_devops/package_management/hello-world'
+python3 setup.py clean --all
+/home/codespace/.local/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  self._finalize_license_expression()
+running clean
+removing 'build/lib' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.12' does not exist -- can't clean it
+removing 'build'
+make[1]: Leaving directory '/workspaces/Devops/python_for_devops/package_management/hello-world'
+   dh_autoreconf_clean -O--skip-tests
+   dh_clean -O--skip-tests
+ debian/rules build
+dh build --with python3 --skip-tests
+   dh_update_autotools_config -O--skip-tests
+   dh_autoreconf -O--skip-tests
+   dh_auto_configure -O--skip-tests
+dh_auto_configure: warning: Please use the third-party "pybuild" build system instead of python-distutils
+dh_auto_configure: warning: This feature will be removed in compat 12.
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/workspaces/Devops/python_for_devops/package_management/hello-world'
+python3 setup.py build
+/home/codespace/.local/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  self._finalize_license_expression()
+running build
+running build_py
+creating build/lib/hello_world
+copying hello_world/__init__.py -> build/lib/hello_world
+copying hello_world/main.py -> build/lib/hello_world
+make[1]: Leaving directory '/workspaces/Devops/python_for_devops/package_management/hello-world'
+   dh_auto_test -O--skip-tests
+dh_auto_test: warning: Please use the third-party "pybuild" build system instead of python-distutils
+dh_auto_test: warning: This feature will be removed in compat 12.
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary --with python3 --skip-tests
+   dh_testroot -O--skip-tests
+   dh_prep -O--skip-tests
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/workspaces/Devops/python_for_devops/package_management/hello-world'
+python3 setup.py install \
+	--root=/workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7 \
+	--optimize=1 \
+	--install-scripts=/workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/bin
+/home/codespace/.local/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  self._finalize_license_expression()
+running install
+/home/codespace/.local/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        By 2025-Oct-31, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running build
+running build_py
+copying hello_world/__init__.py -> build/lib/hello_world
+copying hello_world/main.py -> build/lib/hello_world
+running install_lib
+creating /workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/local/lib/python3.12/dist-packages
+creating /workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/local/lib/python3.12/dist-packages/hello_world
+copying build/lib/hello_world/__init__.py -> /workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/local/lib/python3.12/dist-packages/hello_world
+copying build/lib/hello_world/main.py -> /workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/local/lib/python3.12/dist-packages/hello_world
+byte-compiling /workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/local/lib/python3.12/dist-packages/hello_world/__init__.py to __init__.cpython-312.pyc
+byte-compiling /workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/local/lib/python3.12/dist-packages/hello_world/main.py to main.cpython-312.pyc
+writing byte-compilation script '/tmp/tmp1ttjpdtr.py'
+/usr/bin/python3 /tmp/tmp1ttjpdtr.py
+removing /tmp/tmp1ttjpdtr.py
+running install_egg_info
+running egg_info
+writing hello_world_takeoff7.egg-info/PKG-INFO
+writing dependency_links to hello_world_takeoff7.egg-info/dependency_links.txt
+writing entry points to hello_world_takeoff7.egg-info/entry_points.txt
+writing top-level names to hello_world_takeoff7.egg-info/top_level.txt
+reading manifest file 'hello_world_takeoff7.egg-info/SOURCES.txt'
+writing manifest file 'hello_world_takeoff7.egg-info/SOURCES.txt'
+Copying hello_world_takeoff7.egg-info to /workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/local/lib/python3.12/dist-packages/hello_world_takeoff7-0.1.1-py3.12.egg-info
+running install_scripts
+Installing hello script to /workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/bin
+make[1]: Leaving directory '/workspaces/Devops/python_for_devops/package_management/hello-world'
+   dh_installdocs -O--skip-tests
+   dh_installchangelogs -O--skip-tests
+   dh_systemd_enable -O--skip-tests
+   dh_python3 -O--skip-tests
+   dh_installinit -O--skip-tests
+   dh_systemd_start -O--skip-tests
+   dh_perl -O--skip-tests
+   dh_link -O--skip-tests
+   dh_strip_nondeterminism -O--skip-tests
+   dh_compress -O--skip-tests
+   dh_fixperms -O--skip-tests
+   dh_missing -O--skip-tests
+   dh_installdeb -O--skip-tests
+   dh_gencontrol -O--skip-tests
+   dh_md5sums -O--skip-tests
+   dh_builddeb -O--skip-tests
+dpkg-deb: building package 'hello-world-takeoff7' in '../hello-world-takeoff7_0.1-1_all.deb'.
+ dpkg-genbuildinfo --build=binary -O../hello-world-takeoff7_0.1-1_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../hello-world-takeoff7_0.1-1_amd64.changes
+dpkg-genchanges: warning: unknown information field 'Build-Depends' in input data in binary package stanza of template control file
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source -i --after-build .
+dpkg-source: warning: unknown information field 'Build-Depends' in input data in binary package stanza of template control file
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian hello-world-takeoff7_0.1-1_amd64.changes ...
+E: hello-world-takeoff7: non-standard-toplevel-dir [workspaces/]
+W: hello-world-takeoff7: file-in-unusual-dir [workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/bin/hello]
+W: hello-world-takeoff7: initial-upload-closes-no-bugs [usr/share/doc/hello-world-takeoff7/changelog.Debian.gz:1]
+W: hello-world-takeoff7: wrong-bug-number-in-closes #XXXXXX [usr/share/doc/hello-world-takeoff7/changelog.Debian.gz:3]
+Finished running lintian.

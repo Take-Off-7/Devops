@@ -1,0 +1,9 @@
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/python3/dist-packages/hello_world/__init__.py
+fbc1cf510d7af6c5180189152e2f81e6  usr/lib/python3/dist-packages/hello_world/main.py
+a65927f9f72f366e38336760257a1cfe  usr/lib/python3/dist-packages/hello_world_takeoff7-0.1.1-py3.12.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/hello_world_takeoff7-0.1.1-py3.12.egg-info/dependency_links.txt
+c9b920d3f5ceb8cab445ccb23c91fdf6  usr/lib/python3/dist-packages/hello_world_takeoff7-0.1.1-py3.12.egg-info/entry_points.txt
+6e933f3054f533c63dd59479ca9f4b6f  usr/lib/python3/dist-packages/hello_world_takeoff7-0.1.1-py3.12.egg-info/top_level.txt
+d7b42252152c0883ca576c9e692927b2  usr/share/doc/hello-world-takeoff7/changelog.Debian.gz
+bf26964c193e234f0107062dc0bd6b87  usr/share/doc/hello-world-takeoff7/copyright
+dc46d2eb84dc482b659b5d1941740c18  workspaces/Devops/python_for_devops/package_management/hello-world/debian/hello-world-takeoff7/usr/bin/hello
