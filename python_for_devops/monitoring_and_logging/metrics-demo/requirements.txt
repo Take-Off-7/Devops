@@ -1,0 +1,2 @@
+python-statsd
+boto3
