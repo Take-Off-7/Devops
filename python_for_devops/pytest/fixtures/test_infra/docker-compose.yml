@@ -1,0 +1,17 @@
+version: '3'
+services:
+  centos7a:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: centos7a
+    ports:
+      - "8080:80"
+
+  centos7b:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: centos7b
+    ports:
+      - "8081:80"
