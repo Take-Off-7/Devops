@@ -1,19 +1,18 @@
-# Local Terraform directories and files
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.backup
-*.tfplan
-*.tfvars  # optional: only ignore if contains secrets
+*.terraform.lock.hcl
+*.tfvars
 
-# Crash logs
-crash.log
+# Pulumi
+.pulumi/
+Pulumi.*.yaml
+*.stack.yaml
+*.secret.*
 
-# Override files (used for local testing)
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# CLI configuration files
-.terraformrc
-terraform.rc
+# OS / editor
+*.swp
+.DS_Store
+node_modules/
+__pycache__/
