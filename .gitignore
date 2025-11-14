@@ -14,3 +14,4 @@ Pulumi.*.yaml
 *.DS_Store
 *.idea/
 *.vscode/
+.terraform/
