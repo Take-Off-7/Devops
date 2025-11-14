@@ -1,1 +1,3 @@
 python_for_devops/cloud_computing/wikipedia_lambda/awscliv2.zip filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+.terraform/providers/* filter=lfs diff=lfs merge=lfs -text
