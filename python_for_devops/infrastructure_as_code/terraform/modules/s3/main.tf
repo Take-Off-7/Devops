@@ -6,6 +6,18 @@ resource "random_id" "suffix" {
 # S3 bucket
 resource "aws_s3_bucket" "www" {
   bucket = "www.${var.domain_name}-${random_id.suffix.hex}"
+
+  force_destroy = true
+}
+
+# Disable S3 Block Public Access for this bucket so public policy works
+resource "aws_s3_bucket_public_access_block" "www" {
+  bucket = aws_s3_bucket.www.id
+
+  block_public_acls       = true
+  block_public_policy     = false   # allow public bucket policy
+  ignore_public_acls      = false
+  restrict_public_buckets = false
 }
 
 # Bucket policy for public read
@@ -35,4 +47,25 @@ resource "aws_s3_bucket_website_configuration" "www" {
   index_document {
     suffix = "index.html"
   }
+}
+
+# Upload all static files
+locals {
+  static_files = fileset("${path.root}/static_files", "*")
+}
+
+resource "aws_s3_object" "static" {
+  for_each = { for f in fileset("${path.root}/static_files", "*") : f => f }
+
+  bucket  = aws_s3_bucket.www.bucket
+  key     = each.key
+  source  = "${path.root}/static_files/${each.value}"
+  content_type = lookup(
+    {
+      "index.html"     = "text/html",
+      "devops4all.jpg" = "image/jpeg"
+    },
+    each.key,
+    "application/octet-stream"
+  )
 }

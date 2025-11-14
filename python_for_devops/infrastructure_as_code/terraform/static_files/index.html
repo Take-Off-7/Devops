@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to DevOps4All</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0.5em 0;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffffff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+      to   { text-shadow: 0 0 20px #ffffff, 0 0 40px #ff00ff, 0 0 60px #ff00ff; }
+    }
+
+    .btn {
+      margin-top: 2em;
+      padding: 0.8em 1.5em;
+      background: #ff00ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff69b4;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to DevOps4All!</h1>
+  <p>Your Cloud-powered playground is ready 🚀</p>
+  <a class="btn" href="devops4all.jpg" target="_blank">See Our Logo</a>
+</body>
+</html>

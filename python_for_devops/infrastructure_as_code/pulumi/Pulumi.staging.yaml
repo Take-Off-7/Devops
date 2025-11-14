@@ -1,0 +1,3 @@
+config:
+  aiven:apiToken:
+    secure: AAABACi4iF9wFOXqp2VdFQatI36o8buMT8ecVcWBpZiVBg+hhikcbTsyTHc7zXLUyqDiyWXCFfsJaxCEjfHBSxOZ8hgTm5gcam2W+Q==

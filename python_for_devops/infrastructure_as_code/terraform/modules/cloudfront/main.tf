@@ -16,7 +16,8 @@ resource "aws_cloudfront_distribution" "www_distribution" {
 
   default_cache_behavior {
     target_origin_id       = "www.${var.domain_name}"
-    viewer_protocol_policy = "redirect-to-https"
+    viewer_protocol_policy = "allow-all"
+    # viewer_protocol_policy = "redirect-to-https"
     allowed_methods        = ["GET", "HEAD"]
     cached_methods         = ["GET", "HEAD"]
     compress               = true
@@ -33,7 +34,7 @@ resource "aws_cloudfront_distribution" "www_distribution" {
     max_ttl     = 31536000
   }
 
-  aliases = ["www.${var.domain_name}"]
+  # aliases = ["www.${var.domain_name}"]
 
   restrictions {
     geo_restriction {
@@ -42,7 +43,9 @@ resource "aws_cloudfront_distribution" "www_distribution" {
   }
 
   viewer_certificate {
-    acm_certificate_arn = var.acm_certificate_arn
-    ssl_support_method  = "sni-only"
+    cloudfront_default_certificate = true
+    # acm_certificate_arn = var.acm_certificate_arn
+    # ssl_support_method  = "sni-only"
+    # minimum_protocol_version       = "TLSv1.2_2021"
   }
 }
