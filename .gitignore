@@ -15,3 +15,5 @@ Pulumi.*.yaml
 *.idea/
 *.vscode/
 .terraform/
+.terraform/
+awscliv2.zip
