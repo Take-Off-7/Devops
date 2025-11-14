@@ -2,8 +2,7 @@
 .terraform/
 *.tfstate
 *.tfstate.backup
-*.terraform.lock.hcl
-*.tfvars
+.terraform.lock.hcl
 
 # Pulumi
 .pulumi/
@@ -11,8 +10,7 @@ Pulumi.*.yaml
 *.stack.yaml
 *.secret.*
 
-# OS / editor
-*.swp
-.DS_Store
-node_modules/
-__pycache__/
+# OS / IDE
+*.DS_Store
+*.idea/
+*.vscode/
